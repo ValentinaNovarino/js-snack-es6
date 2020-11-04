@@ -51,17 +51,50 @@ $(document).ready(function() {
     //     <li>Peso: ${weight}</li>
     // <ul>`
 
-    // ************SNACK2*************
-    // Creare un array di nomi e chiedere all'utente due numeri. Creare un nuovo array con i valori che si trovano in una posizione compresa tra i due numeri inseriti dall'utente.
+    //     // ************SNACK2*************
+    //     // Creare un array di nomi e chiedere all'utente due numeri. Creare un nuovo array con i valori che si trovano in una posizione compresa tra i due numeri inseriti dall'utente.
+    //
+    //     // creo un array di nomi
+    //     const names = ['Mario', 'Maria', 'Anna', 'Francesca', 'Luigi', 'Valerio', 'Giacomo'];
+    //
+    //     let number1 = parseInt(prompt('Scegli un  umero comrpeso tra 0 e 6'));
+    //     console.log(number1);
+    //     let number2 = parseInt(prompt('Scegli un  umero comrpeso tra 0 e 6'));
+    //     console.log(number2);
+    //
+    //     let includingNames = names.filter((element, index) => index >= number1 && index <= number2);
+    //     console.log(includingNames);
 
-    // creo un array di nomi
-    const names = ['Mario', 'Maria', 'Anna', 'Francesca', 'Luigi', 'Valerio', 'Giacomo'];
+    // ***************SNACK3**************
+    // A partire da un array di oggetti, creare una copia dell'array e aggiungere ai singoli elementi dell'array una nuova proprietà "position" che contiene una lettera casuale.
 
-    let number1 = parseInt(prompt('Scegli un  umero comrpeso tra 0 e 6'));
-    console.log(number1);
-    let number2 = parseInt(prompt('Scegli un  umero comrpeso tra 0 e 6'));
-    console.log(number2);
+    // creo array prodotti
+    const flowers = [
+        {
+            name: "rose",
+            color: "red",
+            price: 3.00
+        },
+        {
+            name: "sunflower",
+            color: "yellow",
+            price: 3.50
+        },
+        {
+            name: "tulip",
+            color: "pink",
+            price: 2.50
+        },
+        {
+            name: "peony",
+            color: "white",
+            price: 3.50
+        }
+    ];
+    console.log(flowers);
 
-    let includingNames = names.filter((element, index) => index >= number1 && index <= number2);
-    console.log(includingNames);
+    // creo una copia dell'array
+    const flowers2 = [...flowers];
+    console.log(flowers2);
+
 });
