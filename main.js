@@ -57,28 +57,11 @@ $(document).ready(function() {
     // creo un array di nomi
     const names = ['Mario', 'Maria', 'Anna', 'Francesca', 'Luigi', 'Valerio', 'Giacomo'];
 
-    console.log(names);
-
     let number1 = parseInt(prompt('Scegli un  umero comrpeso tra 0 e 6'));
     console.log(number1);
     let number2 = parseInt(prompt('Scegli un  umero comrpeso tra 0 e 6'));
     console.log(number2);
 
-    let includinNames = names.filter((name) => {
-        
-    })
-    const numeri2 = [1, 2, 3, 4, 5];
-let numeri_pari = numeri2.filter((numero) => numero % 2 == 0); // arrow function con return implicito
-console.log(numeri_pari);
-// equivalente a:
-let numeri_pari2 = [];
-for (var i = 0; i < numeri2.length; i++) {
-    let numero = numeri2[i];
-    if(numero % 2 == 0) {
-        numeri_pari2.push(numero);
-    }
-}
-console.log(numeri_pari2);
-
-
+    let includingNames = names.filter((element, index) => index >= number1 && index <= number2);
+    console.log(includingNames);
 });
