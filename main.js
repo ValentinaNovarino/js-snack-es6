@@ -91,10 +91,34 @@ $(document).ready(function() {
             price: 3.50
         }
     ];
-    console.log(flowers);
 
-    // creo una copia dell'array
-    const flowers2 = [...flowers];
-    console.log(flowers2);
+    const randomNumber = (min, max) => {
+
+        return Math.floor(Math.random() * (max - min + 1)) + min;
+    };
+
+    const getRandomChar = () => {
+
+        const alphabet = 'abcdefghijklmnopqrstuvwxyz';
+        const letter = alphabet[randomNumber(0, alphabet.length -1)];
+
+        console.log('lettera generata', letter);
+
+        return letter;
+    };
+
+    //map e operatore spread
+    const copyFlowers = flowers.map((element) => {
+
+        const copyElement = {
+            ...element,
+            position: getRandomChar()
+        };
+
+        return copyElement;
+    });
+
+    console.log('array di partenza', flowers);
+    console.log('nuovo array', copyFlowers);
 
 });
